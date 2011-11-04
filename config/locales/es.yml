@@ -1,5 +1,7 @@
 es:
-  label_import: Importación
+  project_module_xmi_import: Importar XMI
+  permission_xmi_import: Importar XMI
+  label_xmi_import: Importar XMI
   label_requirement_importer: Importador Requisito
   label_upload_notice: "Seleccione el fichero XMI a importar. La versión soportada de xmi es 1.1"
   button_upload: Cargar
