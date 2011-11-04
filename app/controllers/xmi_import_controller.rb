@@ -14,8 +14,7 @@ end
 class TestCaseXmi < Basexmi
 end
 
-
-class ImporterController < ApplicationController
+class XmiImportController < ApplicationController
   unloadable
 
   before_filter :authorize_global
