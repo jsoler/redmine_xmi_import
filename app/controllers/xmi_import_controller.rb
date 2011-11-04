@@ -95,10 +95,10 @@ class XmiImportController < ApplicationController
         issue.fixed_version_id = fixed_version != nil ? fixed_version.id : @project.versions.first.id
         #TODO: asignar campos personaliados: tipo requisito
         requirement_to_stereotype={'RF' => 'Funcional',
-                                'RFN' => 'No funcional',
-                                'PV' =>'De Interfaz',
-                                'AC' => 'Actor',
-                                'RA'=>'De Información'}
+                                   'RFN' => 'No funcional',
+                                   'PV' =>'De Interfaz',
+                                   'AC' => 'Actor',
+                                   'RA'=>'De Información'}
         issue.custom_field_values.first.update_attribute('value', requirement_to_stereotype[requirement.type])
 
         if (!issue.save)
