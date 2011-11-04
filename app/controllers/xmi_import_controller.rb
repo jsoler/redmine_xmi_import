@@ -75,10 +75,10 @@ class XmiImportController < ApplicationController
 
         #TODO: buscar categoria nombre relacionado con requisitos
         category = IssueCategory.find_by_name(default_category)
-                
+
         #TODO: buscar versión nombre relacionado con requisitos
         fixed_version = Version.find_by_name_and_project_id(default_fixed_version,@project.id)
-       
+
         # new issue or find exists one
         issue = Issue.new
         issue.project_id = @project.id
@@ -100,7 +100,7 @@ class XmiImportController < ApplicationController
                                 'AC' => 'Actor',
                                 'RA'=>'De Información'}
         issue.custom_field_values.first.update_attribute('value', requirement_to_stereotype[requirement.type])
-     
+
         if (!issue.save)
           @failed_count += 1
           @failed_issues << requirement
@@ -108,7 +108,7 @@ class XmiImportController < ApplicationController
 
 
       }
-    
+
     else
       flash[:error] = "Plugin de importación XMI no soporta la versión del fichero cargado"
     end
