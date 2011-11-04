@@ -1,0 +1,11 @@
+= requirements_importer
+
+Gemas dependendientes del plugin
+
+  * nokogiri versión (1.4.3.1)
+
+
+Descripción
+
+  Plugin que importa los requisitos provenientes de un fichero xmi versión 1.1 , en el tracker de requisitos de redmine.
+
